@@ -1,7 +1,7 @@
 # SteeringSimulation
 
 ## 概要
-センサステアの伝達関数（または状態方程式）とセンサのモデルをきちんと設計できれば、PIDチューナーで自動調整できるかもしれないっていうやつ。
+センサステアの伝達関数（または状態方程式）とセンサのモデルをきちんと設計できれば、白線追従のゲインをPIDチューナーで自動調整できるかもしれないっていうやつ。
 ![overview](https://github.com/shimotoriharuki/SteeringSimulation/blob/master/pic/overview.png )
 
 ## センサモデル
