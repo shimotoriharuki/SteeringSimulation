@@ -1,0 +1,24 @@
+syms theta
+
+theta_l = 10;
+% axis_offset = 0; %頂点のオフセット
+max = 1000;
+
+%0°のとき，maxの半分になる特性
+% eq_l = - (max / (2 * (theta_l^2))) * (theta - theta_l)^2 + max;
+% eq_r = - (max / (2 * (theta_l^2))) * (theta + theta_l)^2 + max;
+
+%-theta_lが0, theta_lがMAX, 3hteta_lが0の特性
+eq_l = - (max / (4 * (theta_l^2))) * (theta - theta_l)^2 + max;
+eq_r = - (max / (4 * (theta_l^2))) * (theta + theta_l)^2 + max;
+
+figure(1)
+fplot(eq_l, [-30, 10])
+hold on
+fplot(eq_r, [-10, 10])
+hold off
+ylim([0, max])
+
+figure(2)
+eq_diff = eq_r - eq_l; % 差を取ると結局線形になる
+fplot(eq_diff)
